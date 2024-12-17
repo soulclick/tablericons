@@ -13,7 +13,7 @@ keywords = [
   "Django Jinja",
 ]
 authors = [
-  { name = "Adam Johnson", email = "me@adamj.eu" },
+  { name = "Joshua Gartmeier" },
 ]
 requires-python = ">=3.9"
 classifiers = [
@@ -40,9 +40,8 @@ optional-dependencies.django = [
 optional-dependencies.jinja = [
   "jinja2>=2.8",
 ]
-urls.Changelog = "https://github.com/adamchainz/tablericons/blob/main/CHANGELOG.rst"
-urls.Funding = "https://adamj.eu/books/"
-urls.Repository = "https://github.com/adamchainz/tablericons"
+urls.Changelog = "https://github.com/gartmeier/tablericons/blob/main/CHANGELOG.rst"
+urls.Repository = "https://github.com/gartmeier/tablericons"
 
 [tool.isort]
 add_imports = [
