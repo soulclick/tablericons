@@ -188,4 +188,4 @@ That icon again, but with the paths changed to a narrower stroke width, and a "d
 Acknowledgements
 ----------------
 
-This package is heavely inspired by `Adam Johnson's heroicons <https://github.com/gartmeier/heroicons>`__. It's actually mostly copied from it so a huge thanks Adam!
+This package is heavely inspired by `Adam Johnson's heroicons <https://github.com/adamchainz/heroicons>`__. It's actually mostly copied from it so a huge thanks Adam!
