@@ -2,11 +2,11 @@
 tablericons
 ===========
 
-.. image:: https://img.shields.io/github/actions/workflow/status/gartmeier/tablericons/main.yml.svg?branch=main&style=for-the-badge
-   :target: https://github.com/gartmeier/tablericons/actions?workflow=CI
+.. image:: https://img.shields.io/github/actions/workflow/status/soulclick/tablericons/main.yml.svg?branch=main&style=for-the-badge
+   :target: https://github.com/soulclick/tablericons/actions?workflow=CI
 
 .. image:: https://img.shields.io/badge/Coverage-100%25-success?style=for-the-badge
-   :target: https://github.com/gartmeier/tablericons/actions?workflow=CI
+   :target: https://github.com/soulclick/tablericons/actions?workflow=CI
 
 .. image:: https://img.shields.io/pypi/v/soulclick-tablericons.svg?style=for-the-badge
    :target: https://pypi.org/project/soulclick-tablericons/
