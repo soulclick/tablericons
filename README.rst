@@ -1,6 +1,6 @@
-=========
+===========
 tablericons
-=========
+===========
 
 .. image:: https://img.shields.io/github/actions/workflow/status/gartmeier/tablericons/main.yml.svg?branch=main&style=for-the-badge
    :target: https://github.com/gartmeier/tablericons/actions?workflow=CI
