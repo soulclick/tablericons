@@ -2,11 +2,11 @@
 tablericons
 =========
 
-.. image:: https://img.shields.io/github/actions/workflow/status/adamchainz/tablericons/main.yml.svg?branch=main&style=for-the-badge
-   :target: https://github.com/adamchainz/tablericons/actions?workflow=CI
+.. image:: https://img.shields.io/github/actions/workflow/status/gartmeier/tablericons/main.yml.svg?branch=main&style=for-the-badge
+   :target: https://github.com/gartmeier/tablericons/actions?workflow=CI
 
 .. image:: https://img.shields.io/badge/Coverage-100%25-success?style=for-the-badge
-   :target: https://github.com/adamchainz/tablericons/actions?workflow=CI
+   :target: https://github.com/gartmeier/tablericons/actions?workflow=CI
 
 .. image:: https://img.shields.io/pypi/v/tablericons.svg?style=for-the-badge
    :target: https://pypi.org/project/tablericons/
@@ -19,12 +19,6 @@ tablericons
    :alt: pre-commit
 
 Use `tablericons <https://tablericons.com/>`__ in your Django and Jinja templates.
-
-----
-
-**Improve your Django and Git skills** with `my books <https://adamj.eu/books/>`__.
-
-----
 
 Requirements
 ------------
@@ -81,10 +75,8 @@ Alternatively, make the library available in all templates by adding it to `the 
 
 The library provides these tags to render SVG icons in their corresponding styles:
 
-* ``tablericon_micro``
-* ``tablericon_mini``
 * ``tablericon_outline``
-* ``tablericon_solid``
+* ``tablericon_filled``
 
 The tags take these arguments:
 
@@ -105,28 +97,26 @@ The tags take these arguments:
   * ``stroke-linejoin``
   * ``vector-effect``
 
-Note: unlike the SVG code you can copy from `tablericons.com <https://tablericons.com/>`__, there is no default ``class``.
-
 Examples
 ^^^^^^^^
 
-An outline “academic-cap” icon:
+An outline “school” icon:
 
 .. code-block:: django
 
-    {% tablericon_outline "academic-cap" %}
+    {% tablericon_outline "school" %}
 
 The same icon, solid, at 40x40 pixels, and a CSS class:
 
 .. code-block:: django
 
-    {% tablericon_outline "academic-cap" size=40 class="mr-4" %}
+    {% tablericon_outline "school" size=40 class="mr-4" %}
 
 That icon again, but with the paths changed to a narrower stroke width, and a "data-controller" attribute declared:
 
 .. code-block:: django
 
-    {% tablericon_outline "academic-cap" stroke_width=1 data_controller="academia" %}
+    {% tablericon_outline "school" stroke_width=1 data_controller="academia" %}
 
 Jinja templates
 ~~~~~~~~~~~~~~~
@@ -139,20 +129,16 @@ Jinja templates
    .. code-block:: python
 
        from tablericons.jinja import (
-           tablericon_micro,
-           tablericon_mini,
            tablericon_outline,
-           tablericon_solid,
+           tablericon_filled,
        )
        from jinja2 import Environment
 
        env = Environment()
        env.globals.update(
            {
-               "tablericon_micro": tablericon_micro,
-               "tablericon_mini": tablericon_mini,
                "tablericon_outline": tablericon_outline,
-               "tablericon_solid": tablericon_solid,
+               "tablericon_filled": tablericon_filled,
            }
        )
 
@@ -181,74 +167,25 @@ Note: unlike the SVG code you can copy from `tablericons.com <https://tablericon
 Examples
 ^^^^^^^^
 
-An outline “academic-cap” icon:
+An outline “egg” icon:
 
 .. code-block:: jinja
 
-    {{ tablericon_outline("academic-cap") }}
+    {{ tablericon_outline("egg") }}
 
 The same icon, solid, at 40x40 pixels, and a CSS class:
 
 .. code-block:: jinja
 
-    {{ tablericon_solid("academic-cap", size=40, class="mr-4") %}
+    {{ tablericon_filled("egg", size=40, class="mr-4") %}
 
 That icon again, but with the paths changed to a narrower stroke width, and a "data-controller" attribute declared:
 
 .. code-block:: jinja
 
-    {{ tablericon_outline("academic-cap", stroke_width=1, data_controller="academia") %}
+    {{ tablericon_outline("egg", stroke_width=1, data_controller="academia") %}
 
-CLI
----
+Acknowledgements
+----------------
 
-Many icons were renamed in version 2 of tablericons.
-To assist you with migrating from version 1, this package includes a CLI that can update your tablericons template tags.
-
-Invoke the CLI like so:
-
-.. code-block:: console
-
-    $ python -m tablericons update <filename> <filename2> ...
-
-To run it on all your template files, you can use |git ls-files pipe xargs|__:
-
-.. |git ls-files pipe xargs| replace:: ``git ls-files | xargs``
-__ https://adamj.eu/tech/2022/03/09/how-to-run-a-command-on-many-files-in-your-git-repository/
-
-.. code-block:: console
-
-    $ git ls-files -- '*.html' | xargs python -m tablericons update
-
-The tool will update icon names for those that were renamed in v2, as per the table in the `tablericons release notes <https://github.com/tailwindlabs/tablericons/releases/tag/v2.0.0>`__.
-It should find both Django and Jinja template tags:
-
-.. code-block:: diff
-
-  -{% tablericon_outline "archive" class="mr-2" %}
-  +{% tablericon_outline "archive-box" class="mr-2" %}
-
-  -{{ tablericon_solid("archive", class="mr-2") }}
-  +{{ tablericon_solid("archive-box", class="mr-2") }}
-
-Also note that ``solid`` icons changed their default size from 20px to 24px.
-If you are using them without specifying a size, they will now be larger, which could break some designs.
-You can keep the v1 size by specifying it exactly:
-
-.. code-block:: django
-
-    {% tablericon_solid "archive-box" size=20 %}
-
-.. code-block:: jinja
-
-    {{ tablericon_solid("archive-box", size=20) }}
-
-Or through other mechanisms:
-
-* Tailwind’s `width <https://tailwindcss.com/docs/width>`__ and `height <https://tailwindcss.com/docs/height>`__ classes: ``w-5 h-5``
-* other CSS classes
-* sizing the containing elements
-
-Due to the variety of ways to size icons, it’s unfortunately not possible to automatically add the size to unsized solid icons.
-
-Good luck, and may the odds be ever in your favour.
+This package is heavely inspired by [Adam Johnson's heroicons](https://github.com/gartmeier/heroicons). It's actually mostly copied from it so a huge thanks Adam!
