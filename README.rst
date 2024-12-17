@@ -30,13 +30,13 @@ Django 4.2 to 5.1 supported.
 Usage
 -----
 
-The ``tablericons-reloaded`` package supports both Django templates and Jinja templates.
+The ``tablericons-new`` package supports both Django templates and Jinja templates.
 Follow the appropriate guide below.
 
 Django templates
 ~~~~~~~~~~~~~~~~
 
-1. Install with ``python -m pip install tablericons-reloaded[django]``.
+1. Install with ``python -m pip install tablericons-new[django]``.
 
 2. Add to your ``INSTALLED_APPS``:
 
@@ -121,7 +121,7 @@ That icon again, but with the paths changed to a narrower stroke width, and a "d
 Jinja templates
 ~~~~~~~~~~~~~~~
 
-1. Install with ``python -m pip install tablericons-reloaded[jinja]``.
+1. Install with ``python -m pip install tablericons-new[jinja]``.
 
 2. Adjust your Jinja ``Environment`` to add the global ``tablericon_*`` functions from ``tablericons.jinja``.
    For example:
