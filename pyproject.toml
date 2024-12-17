@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "tablericons-new"
-version = "0.1.0"
+version = "1.0.0"
 description = "Use tablericons in your Django and Jinja templates."
 readme = "README.rst"
 keywords = [
