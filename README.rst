@@ -36,7 +36,7 @@ Follow the appropriate guide below.
 Django templates
 ~~~~~~~~~~~~~~~~
 
-1. Install with ``python -m pip install soulclick-tablericons[django]``.
+1. Install with ``python -m pip install 'soulclick-tablericons[django]'``.
 
 2. Add to your ``INSTALLED_APPS``:
 
@@ -121,7 +121,7 @@ That icon again, but with the paths changed to a narrower stroke width, and a "d
 Jinja templates
 ~~~~~~~~~~~~~~~
 
-1. Install with ``python -m pip install soulclick-tablericons[jinja]``.
+1. Install with ``python -m pip install 'soulclick-tablericons[jinja]'``.
 
 2. Adjust your Jinja ``Environment`` to add the global ``tablericon_*`` functions from ``tablericons.jinja``.
    For example:
