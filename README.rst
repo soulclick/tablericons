@@ -162,8 +162,6 @@ The functions take these arguments:
   * ``stroke-linejoin``
   * ``vector-effect``
 
-Note: unlike the SVG code you can copy from `tablericons.com <https://tablericons.com/>`__, there is no default ``class``.
-
 Examples
 ^^^^^^^^
 
