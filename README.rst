@@ -33,8 +33,6 @@ Usage
 The ``soulclick-tablericons`` package supports both Django templates and Jinja templates.
 Follow the appropriate guide below.
 
-The project names ``tablericons`` and ``django-tablericons`` on PyPI are either already taken or too similar to existing project names.
-
 Django templates
 ~~~~~~~~~~~~~~~~
 
